@@ -15,7 +15,8 @@ if os.environ.get("APP_DIR") is not None: # build and deploy
         "docker",
         "build",
         "-t",
-        os.environ.get("APP_NAME", os.environ.get("CONTAINER_NAME"))
+        os.environ.get("APP_NAME", os.environ.get("CONTAINER_NAME")),
+        os.environ.get("APP_DIR")
     ],cwd=os.environ.get("APP_DIR"))
 subprocess.run([
     "docker",
