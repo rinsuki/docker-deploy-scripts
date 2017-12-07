@@ -11,7 +11,7 @@ if os.environ.get("APP_DIR") is not None: # build and deploy
     subprocess.run([
         "git", "pull"
     ],cwd=os.environ.get("APP_DIR"))
-	subprocess.run([
+    subprocess.run([
         "docker",
         "build",
         "-t",
