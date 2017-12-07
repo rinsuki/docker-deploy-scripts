@@ -33,6 +33,7 @@ r = subprocess.run([
     "--name",
     os.environ.get("CONTAINER_NAME"),
     sys.argv[1:],
+    "-d",
     os.environ.get("APP_NAME", os.environ.get("CONTAINER_NAME"))
 ])
 exit(r.returncode())
