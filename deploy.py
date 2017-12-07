@@ -28,13 +28,16 @@ subprocess.run([
     "rm",
     os.environ.get("CONTAINER_NAME")
 ])
-r = subprocess.run([
+a = [
     "docker",
     "run",
     "--name",
-    os.environ.get("CONTAINER_NAME"),
-    sys.argv[1:],
+    os.environ.get("CONTAINER_NAME")
+]
+a += sys.argv[1:]
+a += [
     "-d",
     os.environ.get("APP_NAME", os.environ.get("CONTAINER_NAME"))
-])
+]
+r = subprocess.run(a)
 exit(r.returncode())
