@@ -40,4 +40,4 @@ a += [
     os.environ.get("APP_NAME", os.environ.get("CONTAINER_NAME"))
 ]
 r = subprocess.run(a)
-exit(r.returncode())
+exit(r.returncode)
