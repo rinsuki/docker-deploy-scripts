@@ -18,3 +18,11 @@ CONTAINER_NAME=jenkins APP_NAME=jenkins:latest ./deploy.py -e VIRTUAL_HOST=jenki
 ```
 APP_DIR=~/apps/my-app APP_NAME=my-app CONTAINER_NAME=my-app ./deploy.py -e VIRTUAL_HOST=myapp.example.com
 ```
+
+### gitを直接clone
+
+required: [`ghq` command](https://github.com/motemen/ghq)
+
+```
+APP_GIT=https://github.com/docker-library/hello-world APP_GIT_SUBDIR=i386/hello-world CONTAINER_NAME=hello-world ./deploy.py
+```
